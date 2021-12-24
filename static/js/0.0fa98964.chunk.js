@@ -1,0 +1,2 @@
+webpackJsonp([0],{43:function(e,t,a){"use strict";function l(){return r.a.createElement(n.Suspense,{fallback:r.a.createElement("h1",null,"Cargando...")},r.a.createElement("div",null,r.a.createElement("iframe",{src:"https://m.cdelu3.cf/inicio3/",title:"Ejemplo",style:{width:"98%",height:"1100px"},flameBorder:"0"})))}Object.defineProperty(t,"__esModule",{value:!0});var n=a(0),r=a.n(n);t.default=l}});
+//# sourceMappingURL=0.0fa98964.chunk.js.map
