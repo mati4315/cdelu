@@ -1,13 +1,18 @@
-/*Para que el contenido principal no supere la longitud de 700px */
+/*Para que el contenido principal no supere la longitud de 750px */
 @media (min-width: 750px) {
-    #box-principal {
+    #box-principalfalse {
         max-width: 750px;
     }
 }
 
 
+/* hace que no se repita los diarios si el usuario viene de una ID ej: telegram */
+#box-principaltrue {
+    display: none;
+}
 
-/*Para Movil o menor a 700px desaparece el menu Vertical */
+
+/*Para Movil o menor a 750px desaparece el menu Vertical */
 @media (max-width: 750px) {
 
 
@@ -37,7 +42,7 @@ html {
 
 
 /*Sombreado y fondo*/
-#box-principal {
+#box-principalfalse {
     margin-bottom: 30px;
     background: #1f1d33f2;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -144,7 +149,19 @@ html {
         font-size: 10px;
         top: 0px;
     }
+    .modal-body{
+        font-size: 13px;
+    }
+    .link_face i{
+        font-size: 15px;
+    }
+    .link_facebook i{
+        font-size: 15px;
+    }
+    
 }
+/* Finalizan estilos dinamicos si es disposivo movil*/
+
 
 
 .modal-body {
@@ -169,9 +186,9 @@ img {
     display: block;
 }
 
-
-.espaciado-false{
-    display: none;
+.titulo-facebook{
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 .barra {
@@ -195,17 +212,11 @@ iframe{
     align-items: center;
     margin: auto;
 }
-/* Finalizan estilos dinamicos si es disposivo movil*/
-
-
-
 
 
  /* Comienza lo de facebook
  .s es para que no se vean los iconos grandes sin sentido en el modal
- True son los estilos dinamicos
-
- */
+ True son los estilos dinamicos */
 
  .s{
     display: none;
@@ -232,3 +243,22 @@ iframe{
 
 
 
+.faceIDimg img{
+    width: 50%;
+    height: auto;
+    
+}
+
+.containerfaceID {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5em;
+}
+
+#box-principalfaceID{
+    margin-bottom: 30px;
+    background: #1f1d33d3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    color: aqua;
+}
