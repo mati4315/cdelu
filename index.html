@@ -1,44 +1,141 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
-    <meta charset="UTF-8">
-    <title> Noticias CdelU.ar </title>
-    <link href="favicon.ico" rel="icon">
-    <link rel="stylesheet" href="css/estilos-menu.css">
-    <link rel="stylesheet" href="css/estilos.css">
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-223841610-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-223841610-1');
+</script>
+    <meta charset="UTF-8" />
+    <title>Noticias CdelU.ar</title>
+    <link href="favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="css/estilos-menu.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
 
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
-     
     <!-- Boxiocns CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<body>
+  <body>
+    <!--Comienza todo lo que es el Menu     -->
+    <div class="sidebar open">
+      <div class="logo-details">
+        <i class="bx bx-menu" id="btn"> </i>
+        <div class="logo_name">Cdelu.ar</div>
+        <img class="logo-movil" src="logo.png" alt="profileImg" />
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">
+            <i class="bx bxs-home"></i>
+            <span class="link_name">Inicio</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Inicio</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <div class="iocn-link">
+            <a
+              ><i class="bx bx-news"></i>
+              <span class="link_name">Diarios</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" value="open" href="#">Diarios</a></li>
+            <li><a href="?genesis24">Genesis24</a></li>
+            <li><a href="?prensa_federal">La Prensa Federal</a></li>
+            <li><a href="?lapiramide">La Pirámide</a></li>
+            <li><a href="?radiodigital">Radio 9 Digital</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <div class="iocn-link">
+            <a
+              ><i class="bx bx-grid-alt"></i>
+              <span class="link_name">Categorias</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Categorias</a></li>
+            <li><a href="?funebres">Fúnebres</a></li>
+            <li><a href="?policiales">Policiales</a></li>
+            <li><a href="?ciudad">Ciudad</a></li>
+            <li><a href="?deportes">Deportes</a></li>
+            <li><a href="?politica">Politica</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="faceb.html">
+            <i class="bx bxl-facebook-square"></i>
+            <span class="link_name">Facebook</span>
+          </a>
+        </li>
+
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="logo.png" alt="profileImg" />
+            </div>
+
+            <div class="name-job">
+              <div class="profile_name">Noticias de</div>
+              <div class="job">Concepcion del Uruguay</div>
+            </div>
+            <i class=""></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--Finaliza Menu    -->
+
+    <section class="home-section">
+      <!--Este ID llama a la funciones dentro de Funciones.js carga los datos del Facebook unicamente cuando se ingresa con una id     -->
+      <div id="myID"></div>
+      <!--end    -->
+
+      <div class="barra">< Ultimas noticias ></div>
+      <br />
+
+      <div class="contenedor" id="contenedor">
+        <center>
+          Cargando...
+          <progress id="carga"></progress>
+        </center>
+      </div>
+    </section>
+
+    <script src="css/funciones.js"></script>
 
 
-  
 
 
-  <div class="menu" id="menu"></div>
-
-
-  <script src="css/menu.js"></script>
-
-
-
-
-  
-
-
-
-<script src="css/funciones.js"></script>
-
-
-
-</body>
+    
+  </body>
 </html>
