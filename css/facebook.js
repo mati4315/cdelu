@@ -36,8 +36,9 @@ const cargarnoticias = async () => {
   <div class="row">
     <div class="col-6" >
         <a class="link_face" Target="_blank" href="https://fb.com/${data[i].face_user_id}"><h5>
-          <i class='bx bxl-facebook-square'>  ${data[i].face_user_name}</i>
+          <i class='bx bxl-facebook-square'>  ${data[i].face_user_name.replace(true, 'Link del usuario')}</i>
           </h5></a>   
+
     </div>    
                                   
         <div class="col-6" >
@@ -60,10 +61,8 @@ const cargarnoticias = async () => {
 
             <div class="row">
 
-            
-            
                
-              <div class="col" id="imagen-${'' == data[i].portada_local}">                                    
+              <div class="col" id="imagen-${null == data[i].portada_local}">                                    
               <img class="img-fluid" loading="lazy" src="${
                 data[i].portada_local
               }" >
@@ -75,7 +74,7 @@ const cargarnoticias = async () => {
                 <p><h6>${
                   data[i].contenido.replace(/(<.*?>)/g, " ").substr(0, 470)}</h6></p>     
             
-                
+
             </div>
                   
               </div>
@@ -92,9 +91,8 @@ const cargarnoticias = async () => {
                     <div class="row align-items-center">
                     <div id="nota-diario" class="col">
     
-     
                  
-  <div id="centenido-${'' == data[i].portada_local}-${470 >= data[i].contenido.replace(/(<.*?>)/g, " ").length}">                     
+  <div id="centenido-${null == data[i].portada_local}-${470 >= data[i].contenido.replace(/(<.*?>)/g, " ").length}">                     
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#id${
       data[i]._ID
     }">
